@@ -7,7 +7,7 @@ public class Main {
         
         // Création des films
         Movie RogueOne = new Movie("Rogue One", Movie.NEW_RELEASE);
-        Movie ReineDesNeiges = new Movie("Reine des neiges", Movie.CHILDRENS);
+        Movie ReineDesNeiges = new Movie("Reine des neiges", Movie.CHILDREN);
         Movie starWars = new Movie ("Star Wars III", Movie.REGULAR);
 
         // Louer les films pour le client
@@ -19,10 +19,8 @@ public class Main {
         client.addRental(rReine);
         client.addRental(rStarWars);
         
-        
 
         // Affichage
-        System.out.println(client.getName() + " a loué les films :");
         System.out.println(client.statement());
     }
 }
