@@ -1,2 +1,7 @@
-package model;public class PriceCode {
+package model;
+
+public interface PriceCode extends Cloneable{
+    double getAmount(int days);
+    int getRenterPoints(int days);
+    PriceCode clone();
 }

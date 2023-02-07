@@ -1,6 +1,7 @@
 package model;
 
 public class Rental {
+    private PriceCode _price;
     private Movie _movie;
     private int _daysRented;
     
@@ -8,6 +9,7 @@ public class Rental {
     {
 	_movie=movie;
 	_daysRented=daysRented;
+    _price = movie.getPriceCode().clone();
     }
     public int getDaysRented()
     {
@@ -16,5 +18,13 @@ public class Rental {
     public Movie getMovie()
     {
 	return _movie;
+    }
+
+    public double getAmount() {
+        return _price.getAmount(getDaysRented());
+    }
+
+    public int getRenterPoints() {
+        return _price.getRenterPoints(getDaysRented());
     }
 }
